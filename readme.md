@@ -65,17 +65,29 @@ logistics_id | INT | Yes | 0 | No | 物流信息外键
 created_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单创建时间
 updated_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单更新时间
 
+###### 品牌(Brand)
+
+字段名 | 数据类型 | 不是NULL | 默认值 | 主键 | 注释
+---|---|---|---|--- |---
+id(brand_id) | INT | Yes | 0 | Yes | 品牌主键
+brand_name | VARCHAR | Yes | 0 | No | 品牌名称
+created_at | TIMESTAMP | Yes | 9999-12-31 23:59:59 | No | 订单创建时间
+updated_at | TIMESTAMP | Yes | 9999-12-31 23:59:59 | No | 订单更新时间
+
 ###### 产品信息(Product_Information)
 
 字段名 | 数据类型 | 不是NULL | 默认值 | 主键 | 注释
 ---|---|---|---|--- |---
-product_id | INT | Yes | 0 | Yes | 产品信息主键
+id(product_id) | INT | Yes | 0 | Yes | 产品信息主键
+brand_id | INT | Yes | 0 | No | 品牌外键
+product_type | ENUM | Yes | 0 | No | 产品类型:[{0:手机},{1:笔记本电脑},{2:平板},{3:摄影摄像},{4:智能数码}]
+product_name | VARCHAR | Yes | 0 | No | 产品名称
 sku_memory_capacity | ENUM | Yes | 0 | No | SKU内存容量:[{1:2G},{2:3G},{3:4G},{4:6G},{5:8G}]
 sku_storage_space | ENUM | Yes | 0 | No | SKU存储空间:[{1:16G},{2:32G},{3:64G},{4:128G},{5:256G}，{6:512G}]
 sku_color | VARCHAR | Yes | 0 | No | SKU颜色 
 sku_network_type | ENUM | Yes | 0 | No | SKU网络类型:[{1:全网通},{2:联通},{3:移动},{4:电信}]
-created_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单创建时间
-updated_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单更新时间
+created_at | TIMESTAMP | Yes | 9999-12-31 23:59:59 | No | 订单创建时间
+updated_at | TIMESTAMP | Yes | 9999-12-31 23:59:59 | No | 订单更新时间
 
 
 ###### 物流信息(Logistics_Information)
