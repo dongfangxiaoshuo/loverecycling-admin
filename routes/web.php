@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/category','Home\CategoryController@index');
+Route::get('/category/productInformation','Home\CategoryController@productInformation');
