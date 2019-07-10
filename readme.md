@@ -129,4 +129,8 @@ created_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单创建时间
 updated_at | DATETIME | Yes | 9999-12-31 23:59:59 | No | 订单更新时间
 
 > Api接口
+#### 类别(category)
+###### Route::get('/category','Home\CategoryController@index');  //获取首页加载数据
+###### Route::get('/category/productInformation','Home\CategoryController@productInformation');//获取根据产品类型、品牌区分的数据
+
 
