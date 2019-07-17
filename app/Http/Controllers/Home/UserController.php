@@ -9,6 +9,7 @@ use App\User;
 class UserController extends Controller
 {
     public function to_login(Request $request){
+        
         $phone = $request->phone;
         // return $phone;
         $sms = $request->sms;
