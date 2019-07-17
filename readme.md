@@ -77,6 +77,16 @@ toUrl | VARCHAR | Yes | 0 | No | 广告跳转链接
 created_at | TIMESTAMP | Yes | 实时时间 | No | 创建时间
 updated_at | TIMESTAMP | Yes | 实时时间 | No | 更新时间
 
+###### 产品信息图片表(Product_Informations_Img)
+
+字段名 | 数据类型 | 不是NULL | 默认值 | 主键 | 注释
+---|---|---|---|--- |---
+id(product_informations_img_id) | INT | Yes | 0 | Yes | 产品图片主键
+product_informations_id | INT | Yes | 0 | No | 外键关联产品信息表
+imgUrl | INT | Yes | 0 | No | 产品图片链接
+created_at | TIMESTAMP | Yes | 实时时间 | No | 创建时间
+updated_at | TIMESTAMP | Yes | 实时时间 | No | 更新时间
+
 #### 首页模块
 ###### 首页广告表(Index_Information)
 
