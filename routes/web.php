@@ -18,3 +18,4 @@ Route::get('/get_index','Home\IndexController@index');
 Route::get('/get_index_informations','Home\IndexController@index_type');
 Route::get('/category','Home\CategoryController@index');
 Route::get('/category/productInformation','Home\CategoryController@productInformation');
+Route::post('/to_login','Home\UserController@to_login');
